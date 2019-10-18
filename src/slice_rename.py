@@ -3,13 +3,13 @@ import numpy as np
 from scipy.io import wavfile as wav
 from scipy.io.wavfile import read
 from scipy.io.wavfile import write
-# Set the directory you want to start from
 
+# Set the directory you want to start from
 # if you're on a mac right click or two-finger tap, go the one that
 # says 'copy', press option key (it will change to copy pathname)
 # paste that between the quotes of rootDir = '.' (below)
 
-#rootDir = '/Users/alex/Galvanize/Work_Done/projects/Capstone Projects/Heartbeat/reserve data/test run'
+#rootDir = '.'
 
 def slice_rename(start_dir):
     # for dirName, subdirList, fileList in os.walk(rootDir):
@@ -19,11 +19,8 @@ def slice_rename(start_dir):
 
     for root, dirs, files in os.walk(start_dir):
         for file in files:
-            print("made it to here - 0")
             if file.endswith(".wav"):
-                print("made it to here - 1")
                 rate, data = wav.read(file)
-                print("made it to here - 2")
                 len_data=len(data)//10000
                 n_slices = min(len_data, 4)
                 
@@ -38,6 +35,6 @@ def slice_rename(start_dir):
 
 
 if __name__ == "__main__":
-    start_dir = '/Users/alex/Galvanize/Work_Done/projects/Capstone Projects/Heartbeat/reserve data/test run'
+    start_dir = '.'
 
     slice_rename(start_dir)
