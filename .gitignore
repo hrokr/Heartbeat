@@ -1,20 +1,11 @@
 
 # data sources
-data/
-MITdata/
 training/
-
-# prior art
-prior art/
 
 # note books and code
 notebooks/
-src/
-
-
 *.ipynb
 *.odt
-
 
 
 # Byte-compiled / optimized / DLL files
