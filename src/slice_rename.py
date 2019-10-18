@@ -9,7 +9,7 @@ from scipy.io.wavfile import write
 # says 'copy', press option key (it will change to copy pathname)
 # paste that between the quotes of rootDir = '.' (below)
 
-#rootDir = '/Users/alex/Galvanize/Work_Done/projects/Capstone Projects/Heartbeat/reserve data/test run'
+#rootDir = '.'
 
 def slice_rename(start_dir):
     # for dirName, subdirList, fileList in os.walk(rootDir):
@@ -38,6 +38,6 @@ def slice_rename(start_dir):
 
 
 if __name__ == "__main__":
-    start_dir = '/Users/alex/Galvanize/Work_Done/projects/Capstone Projects/Heartbeat/reserve data/test run'
+    start_dir = '.'
 
     slice_rename(start_dir)

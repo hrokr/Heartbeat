@@ -1,5 +1,5 @@
-# Heartbeat
-
+# Heartbeat  
+![heartbeat_gif](https://media.giphy.com/media/yeUxljCJjH1rW/giphy.gif)
 ## Here's a question: How hard would it be to tell a normal heartbeat from an abnormal one from just sound?
 In other words, can we analyze audio recordings of heartbeats, with all their variation as well as environmental noise and still be able to distinguish between normal heartbeat from one where you should call an ambulance? 
 
@@ -78,7 +78,7 @@ Which in this case looks liked this:
 
 #### Oh yes, yes it can. Even if you take out 2/3's of them.
 
-## How I Learned to Stop Worrying and Love -- Or At Least Accept FFT 
+## How I Learned to Stop Worrying and Love -- Or At Least Accept FFT by building a toy model
 
 
 Heartbeat frequency cut-off           |  Visualizing Heartbeat Data
@@ -87,7 +87,7 @@ Heartbeat frequency cut-off           |  Visualizing Heartbeat Data
 
 So, yeah, that craziness above _is_ the fft of the signal.
 
-But we know there is more at the bottom and we know when we listen to heart beat you hear that thump-thump about once a second. So there there has to be more energy those frequencies than the rest. But how do figure that out.
+But we know there is more auditory power at the bottom range of spectrum. We know this because when we listen to heartbeat we hear that thump-thump about once a second. So there has to be more energy those frequencies than the rest or we couldn't pull the heartbeat (the signal) out from the noise. But how do figure that out.
 
 Turns out a Power Spectrum Density graph (also in scipy) is the solution.
 
@@ -95,7 +95,7 @@ Turns out a Power Spectrum Density graph (also in scipy) is the solution.
 
 
 
-I'd like to say from here is was models and great results.
+I'd like to say from here is was models and great results. But it wasn't. And maybe you're thinking you might like to take a shot it.
 
 ### Don't expect Google to be of much help. It was overrun by wingnuts
 
