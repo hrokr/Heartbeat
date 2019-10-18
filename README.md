@@ -99,7 +99,10 @@ Turns out a Power Spectrum Density graph (also in scipy) is the solution.
 ![psd_actual](images/psd_actual.png)
 
 
-I'd like to say from here is was models and great results. But it wasn't. And maybe you're thinking you might like to take a shot at it.
+I'd like to say from here is was models and great results. But it wasn't. And maybe you're thinking you might like to take a shot at it. So, 
+
+PhD and post-docs with up to 6 months of time - 1 : 
+Dude in a Data Science program and a week     - 0
 
 ### Don't expect Google to be of much help. It was overrun by wingnuts
 
