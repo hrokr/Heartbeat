@@ -18,6 +18,8 @@ On that last point, well ... yes and no ... but mostly no.
 
 
 ## The Data - And It's Backstory 
+Physicians have been listen to heart sounds for about 200 years. Auscultation as it's known is somewhat difficult there are whole courses on it and even experts get it wrong. But it's still a good first step because it's fast, inexpensive and a trained ear can get a lot of more obvious patterns.
+
 One of the underpinnings of the not being able to classify heart rhythms by sound is that up until somewhat recently, there was no good set of audio recordings. In 1999 the NIH funded MIT's Laboratory for Computational Physiology to establish and run [physionet](https://physionet.org/) as repository of recordings, models and research -- all open and freely available. Physionet also sponsors yearly challenges which are alway computational in nature but usually related to the heart; the dataset I used was from the [2016 Physionet heartsounds challenge](https://physionet.org/content/challenge-2016/1.0.0/).
 
 Physionet did an excellent job with structuring the recordings. They kept a separate holdout set for validation that was released only after the competition was concluded. The data researchers were give was pre-randomized, and split into five subsets, each with a separate files listing which recordings were normal and abnormal. More information on the datas as well as the results of the top models can be found at the [challenge website](https://physionet.org/content/challenge-2016/1.0.0/).
@@ -42,9 +44,12 @@ Incidentally, sounds were taken from one or more the four above locations in add
 
 Incidentally, sounds were taken from one or more the four above locations in addition to another five unidentified locations.
 
-From that we get sounds that, visualized, ideally look something like this:
+From that we get sounds that, visualized, ideally looks something like this:
 
 ![ECG_PCG](images/EKG_PCG.png)
+
+Or, if you used a pulseOx meter, you could create a [photoplethysmogram](https://en.wikipedia.org/wiki/Photoplethysmogram) that looks pretty similar.
+
 ![ECG_PPG](images/ppg.png)
 
 But when you add in noises, like conversations, breathing, the moving of a stethoscope, bowel noises, etc, you get something that looks like this:
@@ -94,8 +99,7 @@ Turns out a Power Spectrum Density graph (also in scipy) is the solution.
 ![psd_actual](images/psd_actual.png)
 
 
-
-I'd like to say from here is was models and great results. But it wasn't. And maybe you're thinking you might like to take a shot it.
+I'd like to say from here is was models and great results. But it wasn't. And maybe you're thinking you might like to take a shot at it.
 
 ### Don't expect Google to be of much help. It was overrun by wingnuts
 
@@ -108,10 +112,15 @@ Heartbeat frequency cut-off           |  Visualizing Heartbeat Data
 ## Prior Work
 As I mentioned, people have been trying to solve this for the last 50 or so years. Some of the prior work includes:
 
-Artificial neural networks (ANNs) have been the most widely used machine learning-based approach for heart sound classification. Typical relevant studies grouped by the signal features as the input to the ANN classifier include: using wavelet features [12], time, frequency and complexity-based features [13], and time-frequency features [14]. A number of researchers have also applied support vector machines (SVM) for heart sound classification in recent years. The studies can also be divided according to the feature extraction methods, including wavelet [15], time, frequency and time-frequency feature-based classifiers [16]. Hidden Markov models (HMM) have also been employed for pathology classification in PCG recordings [17,18]. Clustering-based classifiers, typically the k-nearest neighbors (kNN) algorithm [19,20], have also been employed to classify pathology in PGCs. In addition, many other techniques have been applied, including threshold-based methods, decision trees [21], discriminant function analysis [22,23] and logistic regression.
+* Artificial neural networks (ANNs) have been the most widely used machine learning-based approach for heart sound classification. Most of these have focused on identification based on wavelet features, time, frequency and complexity-based features or time-frequency features. 
 
+* A number of researchers have also applied support vector machines (SVM) for heart sound classification in recent years. Those studies have focused on wavelet, time, frequency and time-frequency feature-based classifiers. 
 
+* Hidden Markov models (HMM)for pathology classification in PCG recordings.
 
+* Clustering-based classifiers, typically the k-nearest neighbors (kNN) algorithm, have also been employed to classify pathology in PGCs. In addition, many other techniques have been applied, including threshold-based methods, decision trees, discriminant function analysis and logistic regression.
 
 ## Resources
-http://www.paulvangent.com -- work was with a PPG but well written and interesting
+[Paul Vangent](http://www.paulvangent.com) -- has an interesting material. He uses a much less noisy PPG but his stuff is well written and interesting.
+
+[Ahmet Taspinar](http://ataspinar.com/2018/04/04/machine-learning-with-signal-processing-techniques/) -- Has an interested GitHub repo on signal processing with ML. I wasn't able to get it to work but it looks promising. 
