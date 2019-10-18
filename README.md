@@ -120,7 +120,22 @@ As I mentioned, people have been trying to solve this for the last 50 or so year
 
 * Clustering-based classifiers, typically the k-nearest neighbors (kNN) algorithm, have also been employed to classify pathology in PGCs. In addition, many other techniques have been applied, including threshold-based methods, decision trees, discriminant function analysis and logistic regression.
 
+## What's State of The Art right now
+
+.8602 [Cristhian Potes, Saman Parvaneh, Asif Rahman, Bryan Conroy](https://archive.physionet.org/challenge/2016/papers/potes.pdf)
+
+Method: AdaBoost (adn AdaBoost-Abstain) and CNN - combines a classifier trained with  time-frequency features  and  a deep-learning  (CNN)  classifier
+
+.8590 [Morteza Zabihi, Ali Bahrami Rad2, Serkan Kiranyaz, Moncef Gabbouj, Aggelos K. Katsaggelos](https://archive.physionet.org/challenge/2016/papers/zabihi.pdf)
+
+Method: Ensemble of neural networks
+
+
+
 ## Resources
 [Paul Vangent](http://www.paulvangent.com) -- has an interesting material. He uses a much less noisy PPG but his stuff is well written and interesting.
 
-[Ahmet Taspinar](http://ataspinar.com/2018/04/04/machine-learning-with-signal-processing-techniques/) -- Has an interested GitHub repo on signal processing with ML. I wasn't able to get it to work but it looks promising. 
+[Ahmet Taspinar](http://ataspinar.com/2018/04/04/machine-learning-with-signal-processing-techniques/) -- Has an interested GitHub repo on signal processing with ML. I wasn't able to get it to work but it looks promising.
+
+#### There's An App For That
+[pyAudioAnalysisPy](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144610) -- Newly updated for python 3+, this has some interesting graphical functionality.
