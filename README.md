@@ -124,6 +124,7 @@ As I mentioned, people have been trying to solve this for the last 50 or so year
 * Clustering-based classifiers, typically the k-nearest neighbors (kNN) algorithm, have also been employed to classify pathology in PGCs. In addition, many other techniques have been applied, including threshold-based methods, decision trees, discriminant function analysis and logistic regression.
 
 ## What's State of The Art right now
+[Note: these are aggregate scores not accuracy, specificity, or selectivity]
 
 .8602 [Cristhian Potes, Saman Parvaneh, Asif Rahman, Bryan Conroy](https://archive.physionet.org/challenge/2016/papers/potes.pdf)
 
